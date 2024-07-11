@@ -9,7 +9,11 @@ file(GLOB_RECURSE source_files
 set(SOURCES ${source_files})
 
 # Detect and add SFML
-find_package(SFML 2 REQUIRED COMPONENTS network audio graphics window system)
+include(FetchContent)
+FetchContent_Declare(SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG 2.6.x)
+FetchContent_MakeAvailable(SFML)
 
 add_executable(${PROJECT_NAME} ${WIN32_GUI} ${SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE "src" "lib")
