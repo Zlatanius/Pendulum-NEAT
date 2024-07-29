@@ -10,7 +10,7 @@ enum class ControlType : uint8_t
     Velocity     = 1,
     Acceleration = 2
 };
-
+    /// @note Konfiguracija prozora
 namespace win
 {
     constexpr uint32_t window_width  = 2560;
@@ -21,6 +21,7 @@ namespace win
     //constexpr uint32_t window_height = 900;
 }
 
+    /// @note Konfiguracija mreze
 namespace net
 {
     const ControlType control_type = ControlType::Velocity;
@@ -29,17 +30,18 @@ namespace net
     const uint32_t output_count = 1;
 }
 
-
+    /// @note Konfiguracija simulacije
 namespace sim
 {
     constexpr float    segment_size   = 100.0f;
     constexpr float    slider_length  = 500.0f;
     constexpr float    max_gravity    = 1000.0f;
-    constexpr uint32_t segments_count = 2;
+    constexpr uint32_t segments_count = 1;
     const Vec2         world_size     = {slider_length + 2.2f * segments_count * segment_size,
                                          segments_count * segment_size * 2.25f};
 }
 
+    /// @note Konfiguracija populacije, vremena iteracije i elite ratio
 namespace sel
 {
     constexpr uint32_t population_size    = 1000;
@@ -47,6 +49,7 @@ namespace sel
     constexpr float    elite_ratio        = 0.35f;
 }
 
+    /// @note Konfiguracija mutacija
 namespace mut
 {
     constexpr float new_node_proba = 0.05f;
@@ -57,13 +60,13 @@ namespace mut
     constexpr double weight_small_range  = 0.01;
 
     constexpr uint32_t mut_count = 4;
-    constexpr uint32_t max_hidden_nodes = 30;
+    constexpr uint32_t max_hidden_nodes = 5;
 }
 
 namespace exp
 {
     constexpr uint32_t seed_offset        = 101;
-    constexpr uint32_t best_save_period   = 10;
+    constexpr uint32_t best_save_period   = 20;
     constexpr uint32_t exploration_period = 1000;
 }
 

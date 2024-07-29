@@ -3,7 +3,7 @@
 #include "user/common/physic/solver.hpp"
 #include "user/training/training_state.hpp"
 
-
+/// @note Ovo je klatno
 struct Agent
 {
     pbd::Solver system;

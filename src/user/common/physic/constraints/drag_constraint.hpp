@@ -7,6 +7,8 @@
 
 namespace pbd
 {
+
+    /// @note Ovaj constraint sluzi da bi cart mogao da vuce klatno za sobom
 struct DragConstraint
 {
     Constraint constraint;

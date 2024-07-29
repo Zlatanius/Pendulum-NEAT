@@ -3,13 +3,13 @@
 #include "user/common/physic/configuration.hpp"
 #include "user/common/configuration.hpp"
 
-
+/// @note Ova klasa valjda cuva trenutno stanje treniranja
 struct TrainingState
 {
     struct IterationConfiguration
     {
         pbd::RealType solver_friction   = 0.003;
-        pbd::RealType solver_gravity    = 1.0;
+        pbd::RealType solver_gravity    = 800.0;
         pbd::RealType solver_compliance = 0.0000;
         pbd::RealType max_speed         = 800.0;
         pbd::RealType max_accel         = 10000.0;
