@@ -41,7 +41,7 @@ struct Stadium : public pez::core::IProcessor
             task->score_function = [](pbd::RealType pos_x, pbd::RealType out_sum, pbd::RealType dist_sum) {
                 pbd::RealType const dist_to_center_penalty = std::abs(1.0 - std::abs(pos_x));
                 //return 100.0f / (1.0f + dist_sum + out_sum) * dist_to_center_penalty;
-                return 1.0 / (1.0 + out_sum * 0.5) * dist_to_center_penalty;
+                return (1.0 / (1.0 + out_sum * 0.5)) * (dist_to_center_penalty * 1.3);
                 //return 100.0f;
             };
         }

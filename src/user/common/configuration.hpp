@@ -26,7 +26,7 @@ namespace net
 {
     const ControlType control_type = ControlType::Velocity;
 
-    const uint32_t input_count  = (control_type == ControlType::Acceleration) ? 9 : 8;
+    const uint32_t input_count  = (control_type == ControlType::Acceleration) ? 9 : 4;
     const uint32_t output_count = 1;
 }
 
@@ -60,7 +60,7 @@ namespace mut
     constexpr double weight_small_range  = 0.01;
 
     constexpr uint32_t mut_count = 4;
-    constexpr uint32_t max_hidden_nodes = 5;
+    constexpr uint32_t max_hidden_nodes = 10;
 }
 
 namespace exp

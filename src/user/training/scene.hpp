@@ -134,10 +134,6 @@ struct Scene : public training::Task
                                         dir_1.x,
                                         dir_1.y,
                                         ang_vel_1 * dt,
-                                        dir_2.x,
-                                        dir_2.y,
-                                        ang_vel_2 * dt,
-                                        dot_1_2
                                 });
                 current_velocity = network.output[0] * configuration.max_speed;
             }

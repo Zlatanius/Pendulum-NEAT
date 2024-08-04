@@ -71,7 +71,7 @@ public: // Attributes
     std::vector<conf::RealType> output;
 
     Info     info;
-    uint32_t max_depth        = 3;
+    uint32_t max_depth        = 4;
     uint32_t connection_count = 0;
 
 public: // Methods
